@@ -5,6 +5,6 @@ To run:
 
 `git clone https://github.com/Aarij00/Pathfinding-Visualizer.git`
 
-`pip install requirements.txt && python GUI.py`
+`pip install -r requirements.txt && python GUI.py`
 
 Try `pip3` and `python3` if above doesn't work
