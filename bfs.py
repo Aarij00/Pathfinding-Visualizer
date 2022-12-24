@@ -23,7 +23,7 @@ class Stack():
 
     def remove(self):
         if self.empty():
-            raise Exception("empty frontier")
+            return False
         else:
             node = self.frontier[-1]
             self.frontier = self.frontier[:-1]
@@ -54,6 +54,9 @@ class BFS:
 
             # Choose a node from the frontier
             node = frontier.remove()
+            if not node:
+                running = False
+                break
             x,y = node.state
             maze.grid[x][y].setExplored()
 

@@ -35,12 +35,13 @@ class Cell:
         return self.value == constants.EMPTY
 
     def setEmpty(self) -> None:
-        if not self.start_node and not self.goal_node:
-            self.value = constants.EMPTY
-            self.color = constants.CYAN
-            self.wall = False
-            self.explored = False
-            self.solution = False
+        self.value = constants.EMPTY
+        self.start_node = False
+        self.goal_node = False
+        self.color = constants.CYAN
+        self.wall = False
+        self.explored = False
+        self.solution = False
 
 
     def getStart(self) -> bool:

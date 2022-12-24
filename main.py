@@ -26,13 +26,17 @@ class Maze:
         return tuple(reversed(self.start))
 
     def setStartState(self, newStart):
-        self.start = newStart
+        self.grid[self.start[0]][self.start[1]].setEmpty()
+        self.start = tuple(reversed(newStart))
+        self.grid[self.start[0]][self.start[1]].setStart()
 
     def getGoalState(self):
         return tuple(reversed(self.goal))
 
     def setGoalState(self, newGoal):
-        self.goal = newGoal
+        self.grid[self.goal[0]][self.goal[1]].setEmpty()
+        self.goal = tuple(reversed(newGoal))
+        self.grid[self.goal[0]][self.goal[1]].setGoal()
     
     def neighbors(self, state):
         row, col = state
@@ -50,10 +54,10 @@ class Maze:
         return result
 
     def solve(self, draw, clock ,menu):
-        self.algorithm = {constants.DFS: 0, constants.BFS: 1, constants.A: 2}[menu.current_item]
-        if self.algorithm == 1:
+        self.algorithm = {constants.DFS: 0, constants.BFS: 1, constants.A: 2}.get(menu.current_item)
+        if self.algorithm == 0:
             DFS().solve(self, draw, clock, menu)
-        elif self.algorithm == 0:
+        elif self.algorithm == 1:
             BFS().solve(self, draw, clock, menu)
         elif self.algorithm == 2:
             AStar().solve(self, draw, clock, menu)

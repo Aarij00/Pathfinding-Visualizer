@@ -42,6 +42,9 @@ class AStar:
 
             # Choose a node from the frontier
             node = frontier.remove()
+            if not node:
+                running = False
+                break
             x,y = node.state
             maze.grid[x][y].setExplored()
 
