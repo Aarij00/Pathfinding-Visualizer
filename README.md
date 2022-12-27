@@ -5,7 +5,7 @@ To run:
 
 `git clone https://github.com/Aarij00/Pathfinding-Visualizer.git`
 
-`cd Pathfinding-Visualizer`
+`cd Pathfinding-Visualizer/`
 
 `pip install -r requirements.txt && python main.py`
 
