@@ -37,7 +37,6 @@ class AStar:
         while running:
             # If nothing left in frontier, then no path
             if frontier.empty():
-                print("*** NO SOLUTION ***")
                 running = False
 
             # Choose a node from the frontier
@@ -87,3 +86,4 @@ class AStar:
             pygame.event.pump()
             clock.tick(500)
         maze.searching = False
+        maze.running = False
