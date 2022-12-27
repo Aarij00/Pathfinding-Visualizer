@@ -1,5 +1,5 @@
 # Pathfinding-Visualizer
-A Python and Pygame project that visualizes pathfinding in a grid using three search algorithms: Depth-First Search, Breadth-First Search, A* Search.
+A Python and Pygame project that visualizes pathfinding between two nodes in a grid using three search algorithms: Depth-First Search, Breadth-First Search, A* Search.
 
 To run:
 
