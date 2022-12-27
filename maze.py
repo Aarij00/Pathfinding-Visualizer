@@ -55,9 +55,9 @@ class Maze:
 
     def solve(self, draw, clock ,menu):
         self.algorithm = {constants.DFS: 0, constants.BFS: 1, constants.A: 2}.get(menu.current_item)
-        if self.algorithm == 0:
+        if self.algorithm == 1:
             DFS().solve(self, draw, clock, menu)
-        elif self.algorithm == 1:
+        elif self.algorithm == 0:
             BFS().solve(self, draw, clock, menu)
         elif self.algorithm == 2:
             AStar().solve(self, draw, clock, menu)
