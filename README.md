@@ -23,7 +23,7 @@ git clone https://github.com/Aarij00/Pathfinding-Visualizer.git && cd Pathfindin
 pip install -r requirements.txt && python main.py
 `
 
-If the above command doesn't work, try:
+   If the above command doesn't work, try:
 `
 pip3 install -r requirements.txt && python3 main.py
 `
